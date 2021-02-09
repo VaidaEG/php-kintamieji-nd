@@ -188,7 +188,7 @@ if ($minutes >= 60) {
     if ($hours === 24) {
         $hours = 0;
     }
-    $minutes -= $hours * 60; 
+    $minutes -= intval($minutes / 60) * 60; 
 } 
 
 echo "$hours hours $minutes minutes $seconds seconds <br>";
